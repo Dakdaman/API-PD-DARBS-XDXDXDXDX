@@ -1,0 +1,11 @@
+import requests
+import json
+
+response = requests.get("http://universities.hipolabs.com/search?name=latvia")
+
+for data in (response.json()):
+  print(data['name'])
+#ja es rakstu "country" man tad tikai izmet Latvia un nekas cits
+schools = ("National Defence Academy of Latvia", "Police Academy of Latvia", "University of Latvia", "Medical Academy of Latvia", "Medical Academy of Latvia", "National Defence Academy of Latvia", "Police Academy of Latvia", "University of Latvia", "Latvian University of Agriculture", "Latvian Maritime Academy", "Latvian Academy of Culture", "Latvian Academy of Sports Education", "Latvian Academy of Music", "Latvian Academy of Arts")
+alphabet_order = sorted(schools)
+print(alphabet_order)
